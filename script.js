@@ -55,7 +55,7 @@ const puzzle2Config = {
 
   // Optional: Path to custom audio file (e.g. "story.mp3" or "assets/story.mp3")
   // Leave empty "" if you don't want an external audio file
-  audioFilePath: "story.mp3",
+  audioFilePath: "ElevenLabs_2026-08-11T10_50_17_Sara - Warm, Clear and Engaging_pvc_sp96_s100_sb100_v3.mp3",
 
   // The secret script revealed ONLY after entering correct password
   secretScript: `تم فك التشفير بنجاح...
