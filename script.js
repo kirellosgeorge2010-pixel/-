@@ -53,6 +53,10 @@ const puzzle2Config = {
   // Milliseconds per character typed in terminal reveal
   typingSpeedMs: 25,
 
+  // Optional: Path to custom audio file (e.g. "story.mp3" or "assets/story.mp3")
+  // Leave empty "" if you don't want an external audio file
+  audioFilePath: "story.mp3",
+
   // The secret script revealed ONLY after entering correct password
   secretScript: `تم فك التشفير بنجاح...
 
@@ -369,6 +373,19 @@ function initPuzzle2() {
 
     terminalBody.style.display = 'block';
     terminalText.textContent = '';
+
+    // Play external audio file if configured & sound is enabled
+    if (puzzle2Config.audioFilePath && sounds.enabled) {
+      try {
+        const customAudio = new Audio(puzzle2Config.audioFilePath);
+        customAudio.volume = 0.8;
+        customAudio.play().catch(e => {
+          console.warn('Audio file play notice (check if file exists):', e);
+        });
+      } catch (err) {
+        console.warn('Audio instantiation error:', err);
+      }
+    }
 
     const timer = setInterval(() => {
       if (index < textToType.length) {
