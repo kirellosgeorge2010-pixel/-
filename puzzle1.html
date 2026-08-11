@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Puzzle 01: Decipher Matrix — Classified Archives</title>
+  <meta name="description" content="Solve the riddles to extract the green frequency sequence code." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- CRT Scanlines overlay -->
+  <div class="scanlines"></div>
+
+  <!-- Audio Toggle Badge -->
+  <button id="audioToggleBtn" class="audio-toggle active" title="Toggle Sound SFX">
+    🔊 SOUND ON
+  </button>
+
+  <div class="container">
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+      <a href="index.html" class="back-link">← HUB OVERVIEW</a>
+      <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">
+        OPERATION: FREQUENCY KEY
+      </span>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="badge">DECIPHER MATRIX</div>
+      <h1>FOUR RIDDLES</h1>
+      <p>Submit your answers for each riddle below to generate system frequency codes. Analyze the output carefully.</p>
+    </header>
+
+    <!-- Dynamic Riddles Container -->
+    <main id="riddlesContainer" class="riddles-grid">
+      <!-- Injected dynamically by script.js -->
+    </main>
+
+    <!-- Final Combination Summary Banner (Revealed when all 4 are solved) -->
+    <section id="finalSummaryPanel" class="panel final-summary-panel">
+      <h2 class="summary-title">SEQUENCE VERIFIED: COLLECT THE GREEN NUMBERS</h2>
+      <div id="codeSlotsContainer" class="code-slots-container">
+        <!-- Rendered dynamically by script.js -->
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

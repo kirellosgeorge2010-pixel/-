@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Classified Archives — Escape Room Experience</title>
+  <meta name="description" content="A mysterious static escape room investigation experience featuring riddle matrixes and terminal script reveals." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- CRT Scanlines overlay -->
+  <div class="scanlines"></div>
+
+  <!-- Audio Toggle Badge -->
+  <button id="audioToggleBtn" class="audio-toggle active" title="Toggle Sound SFX">
+    🔊 SOUND ON
+  </button>
+
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="badge">SECURITY CLEARANCE: LEVEL 4</div>
+      <h1>CLASSIFIED ARCHIVES</h1>
+      <p>Select an operation module to begin data recovery and sequence decryption.</p>
+    </header>
+
+    <!-- Navigation / Operations Hub Grid -->
+    <main class="index-grid">
+      <!-- Puzzle 1 Link Card -->
+      <a href="puzzle1.html" class="puzzle-card-link">
+        <div class="panel">
+          <div>
+            <div class="card-tag">MODULE 01</div>
+            <h2 class="card-title">PUZZLE 01</h2>
+            <p class="card-desc">
+              The Decipher Matrix. Solve four distinct riddles to isolate green frequency numbers and extract the true passcode sequence.
+            </p>
+          </div>
+          <div class="card-btn-action">
+            LAUNCH MODULE <span>→</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Puzzle 2 Link Card -->
+      <a href="puzzle2.html" class="puzzle-card-link">
+        <div class="panel">
+          <div>
+            <div class="card-tag">MODULE 02</div>
+            <h2 class="card-title">PUZZLE 02</h2>
+            <p class="card-desc">
+              Classified Access Terminal. Enter the verified access passcode to unlock and decrypt recovered classified dossier transmissions.
+            </p>
+          </div>
+          <div class="card-btn-action">
+            ACCESS TERMINAL <span>→</span>
+          </div>
+        </div>
+      </a>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

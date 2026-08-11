@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Puzzle 02: Classified Access Terminal — Classified Archives</title>
+  <meta name="description" content="Enter the authorization access passcode to stream decrypted classified dossiers." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- CRT Scanlines overlay -->
+  <div class="scanlines"></div>
+
+  <!-- Audio Toggle Badge -->
+  <button id="audioToggleBtn" class="audio-toggle active" title="Toggle Sound SFX">
+    🔊 SOUND ON
+  </button>
+
+  <div class="container">
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+      <a href="index.html" class="back-link">← HUB OVERVIEW</a>
+      <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">
+        TERMINAL clearance: LEVEL 5
+      </span>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="badge">SECURE TERMINAL</div>
+      <h1>CLASSIFIED REVEAL</h1>
+      <p>Authorization required. Enter the access passcode below to initiate secure document decryption.</p>
+    </header>
+
+    <!-- SECTION 1: Password Auth Panel -->
+    <main>
+      <section id="passwordCard" class="panel password-section">
+        <div class="terminal-header-bar">
+          <div class="terminal-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <span>AUTH_VAULT_v4.09</span>
+        </div>
+
+        <div class="pass-label">ENTER ACCESS CODE</div>
+        <form id="passForm" autocomplete="off">
+          <div class="pass-input-group">
+            <input 
+              type="password" 
+              id="passInput" 
+              class="input-field pass-input" 
+              placeholder="••••" 
+              maxlength="12" 
+              required 
+              autofocus 
+            />
+            <button type="submit" class="btn-unlock">UNLOCK</button>
+          </div>
+        </form>
+        <div id="errorMsg" class="error-msg"></div>
+      </section>
+
+      <!-- SECTION 2: Dynamic Terminal Reveal (Hidden until authorized) -->
+      <section id="terminalScreen" class="terminal-screen">
+        <!-- Decryption Progress Bar -->
+        <div id="progressContainer" class="loading-bar-container" style="display: none;">
+          <div class="loading-label">DECRYPTING CLASSIFIED DATA...</div>
+          <div class="progress-track">
+            <div id="progressFill" class="progress-fill"></div>
+          </div>
+        </div>
+
+        <!-- Terminal Output Box -->
+        <div id="terminalBody" class="terminal-body" style="display: none;">
+          <div class="terminal-header-bar" style="margin: -1.8rem -1.8rem 1.2rem -1.8rem; background: rgba(0,255,102,0.05); border-color: rgba(0,255,102,0.2);">
+            <div class="terminal-dots">
+              <span class="dot green"></span>
+              <span class="dot green"></span>
+              <span class="dot green"></span>
+            </div>
+            <span style="color: var(--color-green);">SECURE_STREAM_ACTIVE // 256-BIT AES</span>
+          </div>
+          <span id="terminalText" class="terminal-text"></span><span class="cursor"></span>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
