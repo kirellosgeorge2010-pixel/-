@@ -21,7 +21,7 @@ const puzzles = [
     title: "RIDDLE 02",
     question: "ما هو الشيء الذي يمكنه إختراق الزجاج دون أن يكسره؟",
     correctAnswers: ["الضوء", "النور", "ضوء", "نور"],
-    correctNumber: "8",
+    correctNumber: "1",
     wrongNumbers: ["3", "5", "6"]
   },
   {
@@ -29,7 +29,7 @@ const puzzles = [
     title: "RIDDLE 03",
     question: "ما هو الشيء الذي أمامك باستمرار ولا تراه؟",
     correctAnswers: ["المستقبل", "مستقبل"],
-    correctNumber: "2",
+    correctNumber: "8",
     wrongNumbers: ["0", "9", "5"]
   },
   {
@@ -37,7 +37,7 @@ const puzzles = [
     title: "RIDDLE 04",
     question: "ما هو الشيء الذي يجب عليك كسره لكي تستخدمه؟",
     correctAnswers: ["البيض", "البيضة", "بيض", "بيضة"],
-    correctNumber: "4",
+    correctNumber: "2",
     wrongNumbers: ["1", "6", "8"]
   }
 ];
